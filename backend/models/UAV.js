@@ -1,4 +1,4 @@
-const express = require("express");
+const mongoose = require("mongoose");
 const UAV = require("../models/UAV");
 
 const router = express.Router();
@@ -287,4 +287,4 @@ router.delete("/:id", async (req, res) => {
 });
 
 
-module.exports = router;
+module.exports = mongoose.model("UAV", uavSchema);
