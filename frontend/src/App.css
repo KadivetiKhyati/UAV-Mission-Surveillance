@@ -1,0 +1,367 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080f1d;
+  color: white;
+}
+
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 245px;
+  min-height: 100vh;
+  background: #0d1628;
+  border-right: 1px solid #1d2a40;
+  padding: 25px 18px;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.nav-item {
+  padding: 13px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  color: #9daabd;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  background: #16243b;
+  color: white;
+}
+
+.nav-item.active {
+  background: #1d4ed8;
+  color: white;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+  flex: 1;
+  padding: 32px;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header p {
+  color: #8795aa;
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.system-status {
+  padding: 9px 14px;
+  border: 1px solid #263852;
+  border-radius: 20px;
+  color: #7ee2a8;
+  background: #0d1a2b;
+  font-size: 13px;
+}
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.stat-card {
+  background: #101b2e;
+  border: 1px solid #21314a;
+  border-radius: 14px;
+  padding: 21px;
+  transition: 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #31558a;
+}
+
+.stat-card h3 {
+  color: #8795aa;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.stat-card p {
+  font-size: 29px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.uav-section {
+  margin-top: 34px;
+}
+
+.uav-section h2 {
+  margin-bottom: 18px;
+  font-size: 21px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.uav-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(270px, 1fr)
+  );
+  gap: 20px;
+}
+
+.uav-card {
+  background: #101b2e;
+  border: 1px solid #21314a;
+  border-radius: 14px;
+  padding: 22px;
+  transition: 0.2s;
+}
+
+.uav-card:hover {
+  transform: translateY(-3px);
+  border-color: #31558a;
+}
+
+.uav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uav-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.status {
+  color: #4ade80;
+  font-size: 12px;
+}
+
+.uav-info {
+  margin-top: 20px;
+  color: #aab6c8;
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+/* =========================
+   BATTERY
+========================= */
+
+.battery {
+  margin-top: 18px;
+}
+
+.battery-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #8795aa;
+  margin-bottom: 7px;
+}
+
+.battery-bar {
+  height: 7px;
+  background: #202d43;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.battery-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* =========================
+   MISSION
+========================= */
+
+.mission-card {
+  border-left: 3px solid #3b82f6;
+}
+
+.mission-status {
+  color: #facc15;
+  font-size: 12px;
+}
+
+/* =========================
+   MISSION FORM
+========================= */
+
+.mission-form {
+  background: #101b2e;
+  border: 1px solid #21314a;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 30px;
+}
+
+.mission-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.mission-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.mission-form input,
+.mission-form select {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0b1526;
+  border: 1px solid #293b57;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.mission-form input:focus,
+.mission-form select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.mission-form button {
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.mission-form button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   COMING SOON
+========================= */
+
+.coming-soon {
+  margin-top: 60px;
+  padding: 60px 30px;
+  text-align: center;
+  background: #101b2e;
+  border: 1px solid #21314a;
+  border-radius: 14px;
+}
+
+.coming-icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.coming-soon h2 {
+  margin: 0 0 10px;
+}
+
+.coming-soon p {
+  color: #8795aa;
+}
+
+.coming-soon span {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #16243b;
+  color: #7ea9ff;
+  font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .mission-form form {
+    grid-template-columns: 1fr;
+  }
+}
